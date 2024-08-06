@@ -16,7 +16,7 @@
 		643A815D2C6042E40098F2E4 /* passGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643A815C2C6042E40098F2E4 /* passGeneratorTests.swift */; };
 		643A81672C6042E40098F2E4 /* passGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643A81662C6042E40098F2E4 /* passGeneratorUITests.swift */; };
 		643A81692C6042E40098F2E4 /* passGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643A81682C6042E40098F2E4 /* passGeneratorUITestsLaunchTests.swift */; };
-		64A9178C2C611CDE00F83597 /* pngwing.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9178B2C611CDD00F83597 /* pngwing.com.png */; };
+		649FE3602C62D2CA00A79265 /* Password.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 649FE35E2C62D2CA00A79265 /* Password.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		643A81622C6042E40098F2E4 /* passGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		643A81662C6042E40098F2E4 /* passGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passGeneratorUITests.swift; sourceTree = "<group>"; };
 		643A81682C6042E40098F2E4 /* passGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		64A9178B2C611CDD00F83597 /* pngwing.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngwing.com.png; sourceTree = "<group>"; };
+		649FE35F2C62D2CA00A79265 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				643A814B2C6042DF0098F2E4 /* Main.storyboard */,
 				643A814E2C6042E30098F2E4 /* Assets.xcassets */,
 				643A81502C6042E30098F2E4 /* LaunchScreen.storyboard */,
-				64A9178B2C611CDD00F83597 /* pngwing.com.png */,
+				649FE35E2C62D2CA00A79265 /* Password.xcdatamodeld */,
 				643A81532C6042E30098F2E4 /* Info.plist */,
 			);
 			path = passGenerator;
@@ -235,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				643A814F2C6042E30098F2E4 /* Assets.xcassets in Resources */,
-				64A9178C2C611CDE00F83597 /* pngwing.com.png in Resources */,
 				643A81522C6042E30098F2E4 /* Base in Resources */,
 				643A814D2C6042DF0098F2E4 /* Base in Resources */,
 			);
@@ -265,6 +264,7 @@
 				643A814A2C6042DF0098F2E4 /* ViewController.swift in Sources */,
 				643A81462C6042DF0098F2E4 /* AppDelegate.swift in Sources */,
 				643A81482C6042DF0098F2E4 /* SceneDelegate.swift in Sources */,
+				649FE3602C62D2CA00A79265 /* Password.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +611,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		649FE35E2C62D2CA00A79265 /* Password.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				649FE35F2C62D2CA00A79265 /* Model.xcdatamodel */,
+			);
+			currentVersion = 649FE35F2C62D2CA00A79265 /* Model.xcdatamodel */;
+			path = Password.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 643A813A2C6042DF0098F2E4 /* Project object */;
 }

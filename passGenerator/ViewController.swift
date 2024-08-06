@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreData
-
 class ViewController: UIViewController {
     
     // Instancia del generador de contraseñas
@@ -24,8 +23,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton! // Nuevo botón para guardar contraseña
+    @IBOutlet weak var viewSavedButton: UIButton! // Nuevo botón para ver contraseñas guardadas
     
-    
+    // Contexto de Core Data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +74,45 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    // Actualiza el label de longitud en tiempo real
+    
+    // Acción del botón guardar contraseña
+    @IBAction func savePassword(_ sender: UIButton) {
+        // Crea un nuevo objeto de contraseña en Core Data
+        let passwordEntity = NSEntityDescription.entity(forEntityName: "Password", in: context)!
+        let passwordObject = NSManagedObject(entity: passwordEntity, insertInto: context)
+        passwordObject.setValue(passwordLabel.text, forKey: "password")
+        
+        // Guarda el contexto de Core Data
+        do {
+            try context.save()
+            print("Contraseña guardada con éxito")
+            let alertController = UIAlertController(title: "Guardado!", message: "La contraseña ha sido guardada con éxito", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } catch {
+            print("Error al guardar contraseña: \(error)")
+        }
+    }
+    
+    // Acción del botón ver contraseñas guardadas
+    @IBAction func viewSavedPasswords(_ sender: UIButton) {
+        // Recupera las contraseñas guardadas de Core Data
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Password")
+        do {
+            let passwords = try context.fetch(fetchRequest) as! [NSManagedObject]
+            var passwordList = ""
+            for password in passwords {
+                passwordList += "\(password.value(forKey: "password") ?? "")\n"
+            }
+            let alertController = UIAlertController(title: "Contraseñas guardadas", message: passwordList, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } catch {
+            print("Error al recuperar contraseñas: \(error)")
+        }
+    }
+    
+    // Actualiza el label de longitud en tiempo
     @objc func updateLengthLabel() {
         let length = Int(lengthSlider.value)
         lengthLabel.text = "Longitud: \(length) Caracteres"

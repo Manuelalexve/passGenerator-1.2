@@ -13,17 +13,17 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="passGenerator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-jf-rsT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-jf-rsT">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-DU-zAL">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-DU-zAL">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shv-ox-okX">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shv-ox-okX">
                                                 <rect key="frame" x="-1" y="83" width="400" height="660"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Q8-ZN8">
@@ -131,6 +131,24 @@
                                                             <action selector="copyPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjv-Lc-K41"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-48-DIW">
+                                                        <rect key="frame" x="58" y="571" width="86" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                                        <connections>
+                                                            <action selector="savePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRT-6D-deI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-Q7-JUh">
+                                                        <rect key="frame" x="261" y="571" width="77" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Buscar"/>
+                                                        <connections>
+                                                            <action selector="viewSavedPasswords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8nu-c3-qtp"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             </view>
@@ -173,8 +191,10 @@
                         <outlet property="lowercaseSwitch" destination="sWm-ME-vkK" id="Jh7-Vh-IAn"/>
                         <outlet property="numbersSwitch" destination="F1V-W1-1dD" id="HX8-uh-qsN"/>
                         <outlet property="passwordLabel" destination="wGT-kR-Fyv" id="07K-sh-04N"/>
+                        <outlet property="saveButton" destination="8AL-48-DIW" id="B3A-Ll-OcR"/>
                         <outlet property="specialCharactersSwitch" destination="XNy-ss-Y8U" id="fMr-NJ-Nzi"/>
                         <outlet property="uppercaseSwitch" destination="60E-vs-wSb" id="bFT-S8-5i7"/>
+                        <outlet property="viewSavedButton" destination="m2k-Q7-JUh" id="Agj-hK-IQk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
