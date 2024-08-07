@@ -1,5 +1,5 @@
 //
-//  viewcontroller2.swift
+//  PasswordListViewController.swift
 //  passGenerator
 //
 //  Created by manuel on 8/7/24.
@@ -47,5 +47,8 @@ class PasswordListViewController: UIViewController, UITableViewDataSource, UITab
         cell.textLabel?.text = password.value(forKey: "password") as? String
         return cell
     }
+    
+    
+    
 }
 

@@ -95,6 +95,23 @@ class ViewController: UIViewController {
     }
     
     // Acción del botón ver contraseñas guardadas
+    //    @IBAction func viewSavedPasswords(_ sender: UIButton) {
+    //        // Recupera las contraseñas guardadas de Core Data
+    //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Password")
+    //        do {
+    //            let passwords = try context.fetch(fetchRequest) as! [NSManagedObject]
+    //            var passwordList = ""
+    //            for password in passwords {
+    //                passwordList += "\(password.value(forKey: "password") ?? "")\n"
+    //            }
+    //            let alertController = UIAlertController(title: "Contraseñas guardadas", message: passwordList, preferredStyle: .alert)
+    //            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+    //            present(alertController, animated: true, completion: nil)
+    //        } catch {
+    //            print("Error al recuperar contraseñas: \(error)")
+    //        }
+    //    }
+    
     @IBAction func viewSavedPasswords(_ sender: UIButton) {
         // Recupera las contraseñas guardadas de Core Data
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Password")
@@ -111,6 +128,8 @@ class ViewController: UIViewController {
             print("Error al recuperar contraseñas: \(error)")
         }
     }
+    
+    
     
     // Actualiza el label de longitud en tiempo
     @objc func updateLengthLabel() {
@@ -173,4 +192,8 @@ class PasswordGenerator {
         
         return password
     }
+    
+    
+    
+    
 }

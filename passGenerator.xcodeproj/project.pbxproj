@@ -17,6 +17,7 @@
 		643A81672C6042E40098F2E4 /* passGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643A81662C6042E40098F2E4 /* passGeneratorUITests.swift */; };
 		643A81692C6042E40098F2E4 /* passGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643A81682C6042E40098F2E4 /* passGeneratorUITestsLaunchTests.swift */; };
 		649FE3602C62D2CA00A79265 /* Password.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 649FE35E2C62D2CA00A79265 /* Password.xcdatamodeld */; };
+		64F90F092C63AE9E0046FC54 /* PasswordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F90F082C63AE9E0046FC54 /* PasswordListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		643A81662C6042E40098F2E4 /* passGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passGeneratorUITests.swift; sourceTree = "<group>"; };
 		643A81682C6042E40098F2E4 /* passGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		649FE35F2C62D2CA00A79265 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		64F90F082C63AE9E0046FC54 /* PasswordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				643A81452C6042DF0098F2E4 /* AppDelegate.swift */,
 				643A81472C6042DF0098F2E4 /* SceneDelegate.swift */,
 				643A81492C6042DF0098F2E4 /* ViewController.swift */,
+				64F90F082C63AE9E0046FC54 /* PasswordListViewController.swift */,
 				643A814B2C6042DF0098F2E4 /* Main.storyboard */,
 				643A814E2C6042E30098F2E4 /* Assets.xcassets */,
 				643A81502C6042E30098F2E4 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				643A814A2C6042DF0098F2E4 /* ViewController.swift in Sources */,
+				64F90F092C63AE9E0046FC54 /* PasswordListViewController.swift in Sources */,
 				643A81462C6042DF0098F2E4 /* AppDelegate.swift in Sources */,
 				643A81482C6042DF0098F2E4 /* SceneDelegate.swift in Sources */,
 				649FE3602C62D2CA00A79265 /* Password.xcdatamodeld in Sources */,

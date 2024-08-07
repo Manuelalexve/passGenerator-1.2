@@ -13,17 +13,17 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="passGenerator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-jf-rsT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-jf-rsT">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-DU-zAL">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-DU-zAL">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shv-ox-okX">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shv-ox-okX">
                                                 <rect key="frame" x="-1" y="83" width="400" height="660"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Q8-ZN8">
@@ -147,6 +147,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Buscar"/>
                                                         <connections>
                                                             <action selector="viewSavedPasswords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8nu-c3-qtp"/>
+                                                            <segue destination="MLH-3R-FFq" kind="show" id="8Yh-bg-93O"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -201,6 +202,47 @@
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
+        <!--Password List View Controller-->
+        <scene sceneID="rQd-CM-JFd">
+            <objects>
+                <viewController id="MLH-3R-FFq" customClass="PasswordListViewController" customModule="passGenerator" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qCq-Jx-VOP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LOS-zo-Zy0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="passwordCell" id="22o-Vb-nIq">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="22o-Vb-nIq" id="Lg2-9e-r2M">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iqM-xP-hXm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iqM-xP-hXm" firstAttribute="bottom" secondItem="LOS-zo-Zy0" secondAttribute="bottom" id="AID-4b-jqA"/>
+                            <constraint firstItem="LOS-zo-Zy0" firstAttribute="top" secondItem="iqM-xP-hXm" secondAttribute="top" id="Y2a-zY-XvJ"/>
+                            <constraint firstItem="iqM-xP-hXm" firstAttribute="trailing" secondItem="LOS-zo-Zy0" secondAttribute="trailing" id="ajN-G8-fI5"/>
+                            <constraint firstItem="LOS-zo-Zy0" firstAttribute="leading" secondItem="iqM-xP-hXm" secondAttribute="leading" id="pKH-7b-jXV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cDO-c5-LIh"/>
+                    <connections>
+                        <outlet property="tableView" destination="LOS-zo-Zy0" id="siC-gt-X5B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hve-dR-FB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="9"/>
+        </scene>
     </scenes>
     <resources>
         <image name="lock.fill" catalog="system" width="125" height="128"/>
@@ -208,6 +250,9 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
