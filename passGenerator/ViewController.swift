@@ -81,6 +81,11 @@ class ViewController: UIViewController {
         let passwordEntity = NSEntityDescription.entity(forEntityName: "Password", in: context)!
         let passwordObject = NSManagedObject(entity: passwordEntity, insertInto: context)
         passwordObject.setValue(passwordLabel.text, forKey: "password")
+        passwordObject.setValue(Date(), forKey: "creationDate")
+        
+        
+        
+        
         
         // Guarda el contexto de Core Data
         do {
